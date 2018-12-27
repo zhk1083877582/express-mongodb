@@ -15,4 +15,9 @@
     2. 在需要使用这些模块的文件中，通过 require 的方式引入这个模块。这个时候就可以 使用模块里面暴露的属性和方法。 
     CommonJS 就是模块化的标准，nodejs就是 CommonJS（模块化）的实现
  
-     
+## 三、 npm_modules package.json
+    使用 npm install node_module –save 自动更新 dependencies 字段值; 
+    使用 npm install node_module –save-dev 自动更新 devDependencies 字段值; 
+    
+    dependencie   配置当前程序所依赖的其他包。
+    devDependencie  配置当前程序所依赖的其他包，只会下载模块，而不下载这些模块的 测试和文档框架     

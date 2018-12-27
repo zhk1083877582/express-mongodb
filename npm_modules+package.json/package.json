@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "md5-node": "^1.0.1",
+    "silly-datetime": "^0.1.2"
+  },
+  "name": "npm_modules",
+  "version": "1.0.0",
+  "main": "npm_modules.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
