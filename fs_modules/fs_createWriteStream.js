@@ -14,23 +14,11 @@
 */
 var fs = require('fs');
 
-var readStream = fs.createReadStream('1.txt');
-
-var str = '';//保存数据
-var count = '';//读取次数
-
-readStream.on('data',(chunk)=>{
-    str += chunk;
-    count++
+fs.createReadStream('3.txt',(err)=>{
+    if(err){
+        console.log(`删除文件失败${err}`)
+        return false
+    }
+    console.log(`删除文件成功`);
 })
 
-//读取结束
-readStream.on('end',()=>{
-    console.log(str);
-    console.log(count);
-})
-
-//读取失败
-readStream.on('error',(err)=>{
-    console.log(err);
-})
