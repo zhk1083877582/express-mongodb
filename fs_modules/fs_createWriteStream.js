@@ -14,11 +14,18 @@
 */
 var fs = require('fs');
 
-fs.createReadStream('3.txt',(err)=>{
-    if(err){
-        console.log(`删除文件失败${err}`)
-        return false
-    }
-    console.log(`删除文件成功`);
-})
+var writeStream = fs.createWriteStream('4.txt');
 
+var str = 'writeStream写入数据writeStream写入数据writeStream写入数据writeStream写入数据';//写入数据
+
+writeStream.write(str,'utf-8');
+
+writeStream.on('finish',()=>{
+    console.log('写入完成');
+})
+//标记写入完成
+writeStream.end();
+
+writeStream.on('error',()=>{
+    console.log('写入失败');
+})
