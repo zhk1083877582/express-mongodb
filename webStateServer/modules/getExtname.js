@@ -5,7 +5,7 @@ exports.getExtnams = (extname)=>{
         case '.css' :
             return 'text/css';
         case '.js' :
-            return 'text/html'; 
+            return 'text/js'; 
         default:
             return 'text/html';       
 }    

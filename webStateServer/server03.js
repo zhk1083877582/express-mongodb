@@ -14,7 +14,8 @@ console.log(mimeModule.getExtnams('.css'));
  * */ 
 http.createServer(function(req,res){
 
-    let pathName = req.url
+    let pathName = url.parse(req.url).pathname;
+    console.log(pathName);
     if(pathName == '/'){
         pathName = '/index.html';
     }
