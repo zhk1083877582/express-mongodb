@@ -8,7 +8,7 @@ var ejs = require('ejs');
 var fs = require('fs');
 
 http.createServer(function(req,res){
-    res.writeHead(200,{'contentType':"text/html;charset:utf-8"})
+    res.writeHead(200,{'contentType':"text/html;charset:utf-8"});
     // 获取请求是get 还是  post
     var method = req.method.toLocaleLowerCase();
     console.log(method)

@@ -1,11 +1,23 @@
 var ejs = require('ejs');
+var fs = require('fs');
 
 var app = {
     login(req,res){
+        console.log('login11111111111')
+        // res.end('login');
+        ejs.renderFile('views/form.ejs',{
+
+        },(err,data)=>{
+            if(err){
+                console.log(err);
+            }
+            res.end(data);
+        })
+    },
+    dologin(req,res){
         var method = req.method.toLocaleLowerCase();
-        
+        console.log(method)
         if(method == 'get'){
-            console.log(123123)
             let data= {
                 msg:'传递的数据',
                 list:[{title:"文章1"},{title:"文章2"}]
@@ -14,7 +26,7 @@ var app = {
             let getData = url.parse(req.url,true).query;
             console.log(getData);
     
-            ejs.renderFile('../views/login.ejs',{data,getData},(err,data)=>{
+            ejs.renderFile('./views/login.ejs',{data,getData},(err,data)=>{
                 if(err){
                     console.log(err);
                 }
