@@ -24,6 +24,15 @@ http.createServer(function(req,res){
         })
         
     }else if(pathName == '/register'){
+        let data='register数据 && register路由';
+        ejs.renderFile('./views/register.ejs',{
+            msg:data
+        },(err,data)=>{
+            if(err){
+                console.log(err);
+            }
+            res.end(data);
+        })
         res.end('register');
     }else if(pathName == '/order'){
         res.end('order');
